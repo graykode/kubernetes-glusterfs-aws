@@ -1,0 +1,56 @@
+{
+    "clusters": [
+        {
+            "nodes": [
+                {
+                    "node": {
+                        "hostnames": {
+                            "manage": [
+                                "ip-10-43-0-30.ap-northeast-2.compute.internal"
+                            ],
+                            "storage": [
+                                "10.43.0.30"
+                            ]
+                        },
+                        "zone": 1
+                    },
+                    "devices": [
+                        "/dev/xvdf"
+                    ]
+                },
+                {
+                    "node": {
+                        "hostnames": {
+                            "manage": [
+                                "ip-10-43-0-31.ap-northeast-2.compute.internal"
+                            ],
+                            "storage": [
+                                "10.43.0.31"
+                            ]
+                        },
+                        "zone": 2
+                    },
+                    "devices": [
+                        "/dev/xvdf"
+                    ]
+                },
+                {
+                    "node": {
+                        "hostnames": {
+                            "manage": [
+                                "ip-10-43-0-32.ap-northeast-2.compute.internal"
+                            ],
+                            "storage": [
+                                "10.43.0.32"
+                            ]
+                        },
+                        "zone": 3
+                    },
+                    "devices": [
+                        "/dev/xvdf"
+                    ]
+                }
+            ]
+        }
+    ]
+}

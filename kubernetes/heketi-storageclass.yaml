@@ -1,0 +1,12 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: slow
+provisioner: kubernetes.io/glusterfs
+parameters:
+  resturl: "https://ip-10-43-0-30.ap-northeast-2.compute.internal:<your Heketi api server port number>"
+  clusterid: "your cluster id key"
+  restuser: "admin"
+  secretNamespace: "default"
+  secretName: "heketi-secret"
+  volumetype: "replicate:3"
