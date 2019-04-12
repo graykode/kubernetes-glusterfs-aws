@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: flask-api-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flask-api
+    spec:
+      containers:
+      - name: flask-api
+        image: nlkey2022/flask_test
+        imagePullPolicy: Always
+        volumeMounts:
+        - mountPath: "/home/uploads"
+          name: pv
+        resources:
+          limits:
+            cpu: 150m
+            memory: 200Mi
+          requests:
+            cpu: 150m
+            memory: 100Mi
+        ports:
+        - containerPort: 5000
+      nodeSelector:
+        application: "flask"
+      volumes:
+        - name: pv
+          persistentVolumeClaim:
+            claimName: test-claim
